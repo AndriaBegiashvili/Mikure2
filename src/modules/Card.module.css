@@ -1,0 +1,35 @@
+.card{
+    height: 172px;
+    background-color: black;
+    width: 12vw;
+    position: relative;
+    border-radius: 30px;
+}
+.card_blur{
+    position: absolute;
+    background-color: rgba(70, 70, 70, 0.2);
+    height: 60px;
+    bottom: 0;
+    backdrop-filter: blur(5px); /* Adjust the blur amount as needed */
+    width: 100%;
+    border-radius: 0 0 30px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card_blur p{
+    padding-left: 10px;
+    font-size: 16px;
+    line-height:19.5px;
+    font-weight: 600;
+    color: white;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+.playImg{
+    padding-right: 30px;
+}
