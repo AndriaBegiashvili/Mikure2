@@ -14,7 +14,7 @@ const Header = () => {
       <div className={classes.header}>
         <div className={classes.flex}>
           <div>
-            <img src={search} className={classes.search_lens}></img>
+            <img src={search} alt="search" className={classes.search_lens}></img>
             <input
               className={classes.search}
               placeholder="Type here to search"
@@ -23,29 +23,29 @@ const Header = () => {
           <div>
             <ul className={classes.bulletStyle}>
               <li>
-                <img src={home} />
+                <img src={home} alt="home" />
               </li>
               <li>
-                <img src={favorite} />
+                <img src={favorite} alt="fav"/>
               </li>
               <li>
-                <img src={time} />
+                <img src={time} alt="time"/>
               </li>
               <li>
-                <img src={movie} />
+                <img src={movie} alt="movie"/>
               </li>
             </ul>
           </div>
         </div>
         <div className={classes.flex}>
           <div>
-            <img src={notify}/>
+            <img src={notify} alt="notif"/>
           </div>
           <div>
-            <img src={settings}/>
+            <img src={settings} alt="settings"/>
           </div>
           <div>
-            <img src={logo}/>
+            <img src={logo} alt="logo"/>
           </div>
 
         </div>

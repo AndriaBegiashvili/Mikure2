@@ -1,0 +1,40 @@
+.imageCont{
+    width: 60px;
+    height: 60px;
+
+}
+.imageCont img{
+    object-fit: cover;
+    width: 60px;
+    height: 100%;
+    border-radius: 10px;
+}
+.card{
+    height: 60px;
+    position: relative;
+    border-radius: 30px;
+}
+.flex{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.flex_col h3{
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(250, 250, 250, 1);
+    width: 20ch;
+}
+.flex_col p{
+font-size: 14px;
+font-weight: 600;
+line-height: 22px;
+color: rgb(26, 26, 26);
+
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 7px;
+}

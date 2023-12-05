@@ -1,6 +1,6 @@
 .card{
     height: 172px;
-    width: 12vw;
+    width: 15vw;
     position: relative;
     border-radius: 30px;
 }
@@ -9,7 +9,7 @@
     background-color: rgba(70, 70, 70, 0.2);
     height: 60px;
     bottom: 0;
-    backdrop-filter: blur(5px); /* Adjust the blur amount as needed */
+    backdrop-filter: blur(5px);
     width: 100%;
     border-radius: 0 0 30px 30px;
     display: flex;

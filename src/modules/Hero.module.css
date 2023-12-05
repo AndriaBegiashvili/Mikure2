@@ -2,13 +2,13 @@
     width: 80%;
     margin: 32px auto;
     display: grid;
-    grid-template-columns: 19% 78%;
+    grid-template-columns: 23% 73%;
     gap: 60px;
-    height: 600px;
+    height: 512px;
     font-family: "Montserrat";
 }
 .first_col{
-    height: 600px;
+    height: 512px;
     border-radius: 40px;
     background-color: rgba(255, 255, 255, 0.3);
     padding: 10px 30px 0px 30px;
@@ -16,9 +16,10 @@
     display: flex;
     gap: 30px;
     flex-direction: column;
+    width: 360px;
 }
 .second_col{
-    height: 600px;
+    height: 512px;
     border-radius: 40px;
     position: relative;
     background-color: rgba(255, 255, 255, 0.3);
@@ -27,7 +28,7 @@
     object-fit: cover;
     border-radius: 40px;
     width: 100%;
-    height: 600px;
+    height: 512px;
 }
 .big_img::after{
     content: "";
@@ -123,5 +124,86 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 22px;
-    color: white;
+    color: rgba(188, 188, 188, 1);
+}
+.play button{
+    width:154px ;
+    height: 58px;
+    background-color: rgba(250, 250, 250, 1);
+    border: none;
+    border-radius: 10px;
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    padding-left:20px;
+    color: rgba(46, 46, 46, 1);
+
+}
+.play{
+    margin-top: 10px;
+    position: relative;
+}
+.play img{
+    position: absolute;
+    top: 28%;
+    left: 15%;
+    height: 23px;
+}
+.later button{
+    width:214px ;
+    height: 58px;
+    background-color:rgba(250, 250, 250, 0.3);
+    border: none;
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    padding-left:20px;
+    color: rgba(250, 250, 250, 1);
+
+}
+.later{
+    margin-top: 10px;
+    position: relative;
+}
+.later img{
+    position: absolute;
+    top: 24%;
+    left: 8%;
+    height: 30px;
+    z-index: 1;
+}
+.flex{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.info button{
+    border-radius: 100%;
+    height: 53px;
+    width: 53px;
+    border:rgba(250, 250, 250, 0.69) 2px solid;
+    font-size: 50px;
+    background-color: transparent;
+}
+.info{
+    margin-top: 10px;
+    position: relative;
+}
+.dot{
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    color: red;
+}
+.info img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }

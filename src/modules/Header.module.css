@@ -1,6 +1,7 @@
 .header{
     width: 80%;
-    margin: 32px auto;
+    margin: 0 auto;
+    padding-top: 32px;
     position: relative;
     opacity: 50%;
     display: flex;
@@ -29,14 +30,17 @@
 }
 .search_lens{
     position: absolute;
-    top:17px;
-    left: 40px;    
+    top:50%;
+    left: 3%;
 }
 .flex{
     display: flex;
     gap: 60px;
     justify-content: center;
     align-items: center;
+}
+.flex div{
+    cursor: pointer;
 }
 .bulletStyle{
     list-style-type: none;

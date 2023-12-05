@@ -6,11 +6,11 @@ const Card = (props) => {
   return (
     <>
     <div className={classes.card} >
-        <img src={props.source} className={classes.img}></img>
+        <img src={props.source} className={classes.img} alt='movie img'></img>
         <div className={classes.card_blur}>
             <p>{props.title}</p>
             <div className={classes.playImg}>
-                <img src={play} alt="" />
+                <img src={play} alt="play img" />
             </div>
         </div>
     </div>

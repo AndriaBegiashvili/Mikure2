@@ -1,44 +1,33 @@
 import React, { useEffect, useState } from "react";
 import classes from "../modules/Hero.module.css";
 import fire from "../assets/fire.png";
-// import Swiper from 'swiper';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Card from "../UI/card";
+import polygon from "../assets/Polygon 2.png";
+import time from '../assets/Time.png'
+import more from "../assets/More.png"
+import { fetchMovieImages } from "../shared/movieApi";
 
 const Hero = () => {
   const [filmdata, setFilmdata] = useState([]);
 
   const img_path = "https://image.tmdb.org/t/p/w1280/";
   const [image, setImage] = useState([]);
-  const a = image[0];
 
   useEffect(() => {
-    const fetchMovieImages = async () => {
+    const fetchData = async () => {
       try {
-        const response = await fetch(
-          "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1"
-        );
-
-        if (!response.ok) {
-          throw new Error(`Error: ${response.status} - ${response.statusText}`);
-        }
-
-        const data = await response.json();
-        const dataArr = [];
-
-        data.results.forEach((element) => {
-          dataArr.push([element.poster_path, element.title, element.overview]);
-        });
-        const arr = dataArr.slice(1, 6);
-        setImage(dataArr.slice(0, 1));
-        setFilmdata(arr);
+        const { image, filmData } = await fetchMovieImages();
+        setImage(image);
+        setFilmdata(filmData);
       } catch (error) {
-        console.error("Error fetching movie images:", error);
+
+        console.error("Error in component:", error);
       }
     };
 
-    fetchMovieImages();
+    fetchData();
   }, []);
 
   return (
@@ -48,7 +37,7 @@ const Hero = () => {
           <div className={classes.mini_flex}>
             <div className={classes.mini_title}>
               <div>
-                <img src={fire} />
+                <img src={fire} alt="fire img" />
               </div>
               <div>
                 <h3>Most Watching</h3>
@@ -60,11 +49,15 @@ const Hero = () => {
               </h3>
             </div>
           </div>
-          <Swiper direction="vertical" spaceBetween={2} slidesPerView={2.5}>
+          <Swiper direction="vertical" spaceBetween={50} slidesPerView={2.5}>
             {filmdata.map((item, index) => (
               <div className={classes.card}>
-                <SwiperSlide key={index} className={classes.slide}>
-                  <Card source={img_path + item[0]} title={item[1]} />
+                <SwiperSlide key={index}>
+                  <Card
+                    source={img_path + item[0]}
+                    key={index}
+                    title={item[1]}
+                  />
                 </SwiperSlide>
               </div>
             ))}
@@ -74,12 +67,12 @@ const Hero = () => {
         <div className={classes.second_col}>
           <div className={classes.big_img}>
             {image.map((item, index) => (
-              <img src={img_path + item[0]} key={index} />
+              <img src={img_path + item[0]} key={index} alt="movie img" />
             ))}
           </div>
           <div className={classes.reccomended}>
             <div>
-              <img src={fire} />
+              <img src={fire} alt="fire img" />
             </div>
             <div>
               <h2>Reccomended for you!</h2>
@@ -92,9 +85,24 @@ const Hero = () => {
               ))}
             </div>
             <div className={classes.overview}>
-            {image.map((item, index) => (
+              {image.map((item, index) => (
                 <h2 key={index}>{item[2]}</h2>
               ))}
+              <div className={classes.flex}>
+              <div className={classes.play}>
+                <img src={polygon} alt="triangle" />
+                <button>Play</button>
+              </div>
+              <div className={classes.later}>
+                <img src={time} alt="time" />
+                <button>Watch Later</button>
+              </div>
+              <div className={classes.info}>
+                <img src={more} alt="more" />
+                <button>
+                </button>
+              </div>
+              </div>
             </div>
           </div>
         </div>

@@ -1,9 +1,10 @@
-html{
-  background-color: #484c50;
-  /* font-family:'Montserrat', sans-serif; */
-}
+
 body {
   font-family: 'Montserrat', sans-serif;
+  background-image: url("./assets/image 15.png");
+  background-repeat:no-repeat;
+  overflow-x: none;
+
 }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -23,5 +24,4 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
 }
